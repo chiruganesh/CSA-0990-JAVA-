@@ -1,1 +1,54 @@
+15.STAR
+public class RightTrianglePattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+16.VALIDITY CHECKER
+public class ValidityChecker {
+    public static void main(String[] args) {
+        String input = "Your input string here";
+        
+        if (isValid(input)) {
+            System.out.println("Input is valid.");
+        } else {
+            System.out.println("Input is not valid.");
+        }
+    }
+    
+    public static boolean isValid(String input) {
+
+        return true; // Change this to your validation result
+    }
+}
+
+17.FREQUENCVY CHARCTER
+import java.util.HashMap;
+
+public class CharacterFrequency {
+    public static void main(String[] args) {
+        String str = "hello world";
+        HashMap<Character, Integer> charFrequency = new HashMap<>();
+
+        for (char c : str.toCharArray()) {
+            if (charFrequency.containsKey(c)) {
+                charFrequency.put(c, charFrequency.get(c) + 1);
+            } else {
+                charFrequency.put(c, 1);
+            }
+        }
+
+        System.out.println("Character Frequency:");
+        for (char key : charFrequency.keySet()) {
+            System.out.println(key + ": " + charFrequency.get(key));
+        }
+    }
+}
