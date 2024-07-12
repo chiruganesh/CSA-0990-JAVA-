@@ -1,1 +1,106 @@
+1.EVEN ODD :
+import java.util.Scanner;
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+        if(number % 2 == 0) {
+            System.out.println(number + " is an even number.");
+        } else {
+            System.out.println(number + " is an odd number.");
+        }        
+        input.close();
+    }
+}
 
+2.FACTORIAL
+public class Factorial {
+    public static void main(String[] args) {
+        int number = 5;
+        long factorial = 1;
+        for (int i = 1; i <= number; ++i) {
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", number, factorial);
+    }
+}
+
+3.FIBONACI
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10, firstTerm = 0, secondTerm = 1;
+        System.out.println("Fibonacci Series up to " + n + " terms:");
+
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(firstTerm + ", ");
+
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
+
+4.REVERSE WORD
+import java.util.Scanner;
+
+public class ReverseWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = scanner.next();
+        String reversedWord = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversedWord += word.charAt(i);
+        }
+
+        System.out.println("Reversed word: " + reversedWord);
+        scanner.close();
+    }
+}
+
+5.VOWLES
+import java.util.Scanner;
+public class VowelCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine().toLowerCase();
+        int vowels = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                vowels++;
+            }
+        }
+        System.out.println("Number of vowels in the string: " + vowels);
+        scanner.close();
+    }
+}
+
+6.CONVERT STRING INTO INTEGER
+public class StringToInteger {
+    public static void main(String[] args) {
+        String str = "12345";
+        int num = Integer.parseInt(str);
+        System.out.println("Converted Integer: " + num);
+    }
+}
+
+7.ADD SUB MULTI
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 5;
+        int sum = num1 + num2;
+        System.out.println("Sum: " + sum);
+        int difference = num1 - num2;
+        System.out.println("Difference: " + difference);
+        int product = num1 * num2;
+        System.out.println("Product: " + product);
+        int quotient = num1 / num2;
+        System.out.println("Quotient: " + quotient);
+    }
+}
