@@ -1,1 +1,40 @@
+30.Write a program to find whether the person is eligible for vote or not. And if that particular person is not eligible, then print how many years are left to be eligible.
+
+import java.util.Scanner;
+public class VoterEligibility {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are eligible to vote!");
+        } else {
+            int yearsLeft = 18 - age;
+            System.out.println("You are not eligible to vote. You need to wait for " + yearsLeft + " more years.");
+        }
+        scanner.close();
+    }
+}
+
+
+31.Find the LCM and GCD of n numbers?
+
+import java.math.BigInteger;
+public class LCM_GCD_Calculator {
+    public static void main(String[] args) {
+        BigInteger lcm = BigInteger.ONE;
+        BigInteger gcd = new BigInteger(args[0]);
+
+        for (int i = 1; i < args.length; i++) {
+            BigInteger num = new BigInteger(args[i]);
+            lcm = lcm.multiply(num).divide(lcm.gcd(num));
+            gcd = gcd.gcd(num);
+        }
+
+        System.out.println("LCM: " + lcm);
+        System.out.println("GCD: " + gcd);
+    }
+}
+
 
