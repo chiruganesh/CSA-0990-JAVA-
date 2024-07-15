@@ -1,4 +1,5 @@
 15.STAR
+
 public class RightTrianglePattern {
     public static void main(String[] args) {
         int rows = 5;
@@ -12,7 +13,9 @@ public class RightTrianglePattern {
     }
 }
 
+
 16.VALIDITY CHECKER
+
 public class ValidityChecker {
     public static void main(String[] args) {
         String input = "Your input string here";
@@ -30,9 +33,10 @@ public class ValidityChecker {
     }
 }
 
-17.FREQUENCVY CHARCTER
-import java.util.HashMap;
 
+17.FREQUENCVY CHARCTER
+
+import java.util.HashMap;
 public class CharacterFrequency {
     public static void main(String[] args) {
         String str = "hello world";
