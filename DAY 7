@@ -51,6 +51,9 @@ public class Main {
     }
 }
 
+OUT PUT:
+DOG IS EATING
+DOG IS PLAYING
 
 3.
 interface Printable {
@@ -76,3 +79,6 @@ public class Main {
         img.print();
     }
 }
+
+OUTPUT:
+
