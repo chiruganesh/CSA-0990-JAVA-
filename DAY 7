@@ -21,6 +21,10 @@ class Main {
     }
 }
 
+OUTPUT:
+DOG IS SLEEPING
+DOG IS EATING
+
 
 2.
 interface Animal {
