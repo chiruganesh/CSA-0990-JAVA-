@@ -1,1 +1,11 @@
+class constructorExample {
+int a;
+int b;
+constructorExample() {
+int a=15;
+int b=10;
+}
+constructorExample(int a,int b){
+this.a
+
 
