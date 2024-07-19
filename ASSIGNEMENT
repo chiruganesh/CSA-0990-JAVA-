@@ -17,3 +17,151 @@ constructorExample obj1= new constructorExample
 
 
 
+
+
+
+
+
+2.
+class Parent {
+    void even() {
+        for (int i = 1; i <= 20; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    void odd() {
+        for (int i = 1; i <= 20; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    void prime() {
+        for (int i = 1; i <= 20; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+class Child extends Parent {
+    @Override
+    void even() {
+        for (int i = 1; i <= 30; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    @Override
+    void odd() {
+        for (int i = 1; i <= 30; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    @Override
+    void prime() {
+        for (int i = 1; i <= 30; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.even();
+        child.odd();
+        child.prime();
+    }
+}
+
+
+
+
+3.
+class Base {
+    void area(int a, int b) {
+        System.out.println("Area of a square: " + (a * a));
+    }
+}
+
+class Derived extends Base {
+    @Override
+    void area(int a, int b) {
+        System.out.println("Area of a rectangle: " + (a * b));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Derived derived = new Derived();
+        derived.area(4, 5);
+    }
+}
+
+
+
+
+4.
+A.Overloading by increasing and decreasing the number of parameters:
+public class Calculator {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    public int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+B.Overloading by changing the data types of parameters:
+public class Calculator {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    public double sum(double a, double b) {
+        return a + b;
+    }
+}
+
+C.Overloading by interchanging the parameters:
+public class Calculator {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    public int sum(int b, int a) {
+        return a + b;
+    }
+}
