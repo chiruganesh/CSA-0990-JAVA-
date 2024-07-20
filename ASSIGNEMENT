@@ -1,23 +1,30 @@
-class constructorExample {
-int a;
-int b;
-constructorExample() {
-int a=15;
-int b=10;
+1.
+class ConstructorExample {
+    int a;
+    int b;
+
+    ConstructorExample() {
+        a = 10;
+        b = 15;
+    }
+
+    ConstructorExample(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    void disp() {
+        System.out.println("a: " + a + ", b: " + b);
+    }
+
+    public static void main(String[] args) {
+        ConstructorExample obj1 = new ConstructorExample();
+        obj1.disp();
+
+        ConstructorExample obj2 = new ConstructorExample(20, 25);
+        obj2.disp();
+    }
 }
-constructorExample(int a,int b){
-this.a=a;
-this.b=b;
-}
-void disp() (
-system.out.println( "a:"+a ,"b:"+b);
-}
-public static void main(string [] args){
-constructorExample obj1= new constructorExample
-
-
-
-
 
 
 
