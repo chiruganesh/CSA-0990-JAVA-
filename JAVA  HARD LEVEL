@@ -103,29 +103,34 @@ output 3rd Prime number is 5
 
 
 5.
+import java.util.ArrayList;
 import java.util.List;
-public class PerfectSquaresWithDigitSum {
-public static void main(String[] args) {
-int lowerRange = 1;
-int upperRange = 40;
-List<Integer> perfectSquares = new ArrayList<>();
-for (int i = lowerRange; i <= upperRange; i++) {
-int squareRoot = (int) Math.sqrt(i);
-if (squareRoot * squareRoot == i && digitSum(i) < 10) {
-perfectSquares.add(i);
+public class PerfectSquaresWithDigitSumLessThanTen {
+    public static void main(String[] args) {
+        int lowerRange = 1;
+        int upperRange = 40;
+        List<Integer> perfectSquares = new ArrayList<>();
+        for (int i = lowerRange; i <= upperRange; i++) {
+        if (isPerfectSquare(i) && digitSumLessThanTen(i)) {
+                perfectSquares.add(i);
             }
         }
-System.out.println(perfectSquares);
+        System.out.println(perfectSquares);
     }
-public static int digitSum(int num) {
-int sum = 0;
-while (num > 0) {
-sum += num % 10;
-num /= 10;
+    public static boolean isPerfectSquare(int num) {
+        int sqrt = (int) Math.sqrt(num);
+        return (sqrt * sqrt == num);
+    }
+    public static boolean digitSumLessThanTen(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
         }
-return sum;
+        return sum < 10;
     }
 }
+
 output [1, 4, 9, 16, 25, 36]
 
 
