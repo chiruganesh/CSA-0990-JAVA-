@@ -33,6 +33,7 @@ output Number of Student Users: 688
 
 
 3.
+import java.util.Scanner;
 public class FactorCalculator {
  public static void main(String[] args) {
  Scanner input = new Scanner(System.in);
