@@ -1,0 +1,126 @@
+1.public class DaysConverter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of days: ");
+        int days = input.nextInt();
+        int years = days / 365;
+        int weeks = (days % 365) / 7;
+        int remainingDays = (days % 365) % 7;
+       System.out.println("Years: " + years);
+        System.out.println("Weeks: " + weeks);
+        System.out.println("Days: " + remainingDays);
+        input.close();
+    }
+    }
+output    Enter the number of days: 31
+Years: 0
+Weeks: 4
+Days: 3
+
+2.
+public class UserCount {
+public static void main(String[] args) {
+int totalUsers = 856; 
+int staffUsers = 126; 
+int nonTeachingStaff = staffUsers / 3;
+int studentUsers = totalUsers - staffUsers - nonTeachingStaff;
+System.out.println("Number of Student Users: " + studentUsers);
+    }
+}
+output Number of Student Users: 688
+
+
+3.
+public class FactorCalculator {
+ public static void main(String[] args) {
+ Scanner input = new Scanner(System.in);
+System.out.print("Enter the number: ");
+int number = input.nextInt();
+System.out.print("Enter the value of N: ");
+int n = input.nextInt();
+int factors = 0;
+int nthFactor = 0;
+for (int i = 1; i <= number; i++) {
+if (number % i == 0) {
+factors++;
+if (factors == n) {
+nthFactor = i;
+break;
+                }
+            }
+        }
+System.out.println("Number of factors = " + factors);
+System.out.println(n + "th factor of " + number + " = " + nthFactor);
+input.close();
+    }
+}
+
+
+4.
+public class PrimeNumbers {
+public static void main(String[] args) {
+int n = 3;
+int count = 0;
+int number = 2;
+while (count < n) {
+boolean isPrime = true;
+for (int i = 2; i <= Math.sqrt(number); i++) {
+if (number % i == 0) {
+isPrime = false;
+break;
+ }
+}
+if (isPrime) {
+count++;
+ }
+number++;
+        }
+System.out.println(n + "rd Prime number is " + --number);
+int primeCount = 0;
+int nextNumber = number + 1;
+System.out.print(n + " prime numbers after " + number + " are: ");
+while (primeCount < n) {
+boolean isPrime = true;
+for (int i = 2; i <= Math.sqrt(nextNumber); i++) {
+if (nextNumber % i == 0) {
+isPrime = false;
+break;
+                }
+            }
+if (isPrime) {
+System.out.print(nextNumber + ", ");
+primeCount++;
+            }
+nextNumber++;
+        }
+    }
+}
+output 3rd Prime number is 5
+3 prime numbers after 5 are: 7, 11, 13, 
+
+
+5.
+import java.util.List;
+public class PerfectSquaresWithDigitSum {
+public static void main(String[] args) {
+int lowerRange = 1;
+int upperRange = 40;
+List<Integer> perfectSquares = new ArrayList<>();
+for (int i = lowerRange; i <= upperRange; i++) {
+int squareRoot = (int) Math.sqrt(i);
+if (squareRoot * squareRoot == i && digitSum(i) < 10) {
+perfectSquares.add(i);
+            }
+        }
+System.out.println(perfectSquares);
+    }
+public static int digitSum(int num) {
+int sum = 0;
+while (num > 0) {
+sum += num % 10;
+num /= 10;
+        }
+return sum;
+    }
+}
+output [1, 4, 9, 16, 25, 36]
